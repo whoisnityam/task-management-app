@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# Task Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Modern task management app built with React and TypeScript, featuring responsive design and local storage persistence.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**[View Live App](https://fascinating-pony-562fa1.netlify.app/)** • **[View Figma Design](https://www.figma.com/design/D3oHwiBHw5ccsjs3J0BbpJ/Interview?node-id=0-1&t=XnZro08OSTqK76iX-0)**
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Task CRUD Operations** - Create, read, update, delete tasks
+- **Status Management** - Pending, In-Progress, Completed workflow
+- **Real-time Search** - Filter tasks by title and description
+- **Local Storage** - Tasks persist between sessions
+- **Responsive Design** - Mobile-first approach, works on all devices
+- **Modern UI** - Clean interface following professional Figma specifications
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** with TypeScript
+- **React Router** for navigation
+- **Custom Hooks** for state management
+- **CSS Modules** with BEM methodology
+- **Lucide React** for icons
+- **Local Storage API** for data persistence
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Quick Start
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Clone repository
+git clone https://github.com/your-username/task-management-app.git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Install dependencies
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Start development server
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Build for production
+npm run build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📱 Design
+
+This application implements a professional Figma design with:
+
+- **Color Scheme**: #034ea2 (Primary), #231f20 (Text), #66676b (Secondary)
+- **Typography**: Jost font family with responsive scaling
+- **Layout**: Mobile-first responsive design with 600px max-width
+- **Components**: Accordion-based task organization with smooth animations
+
+## 🏗️ Architecture
+
+src/
+├── components/ # Reusable UI components
+├── pages/ # Route-level components
+├── hooks/ # Custom React hooks
+├── types/ # TypeScript definitions
+└── App.tsx # Main application
+
+## 📊 Key Highlights
+
+- ✅ **Production Ready** - Clean, optimized code
+- ✅ **Type Safe** - Full TypeScript implementation
+- ✅ **Performance** - Optimized with React memoization
+- ✅ **Accessibility** - WCAG compliant design
+- ✅ **Cross-Platform** - Works on all modern browsers
+
+---
+
+**Built with ❤️ using React, TypeScript, and modern web technologies**
