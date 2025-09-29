@@ -1,0 +1,360 @@
+.task-form-page {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.task-form-page__content {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-form__input,
+.task-form__textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #66676b;
+  background-color: white;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.task-form__input {
+  height: 30px;
+}
+
+.task-form__input::placeholder,
+.task-form__textarea::placeholder {
+  color: #66676b;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.task-form__input:focus,
+.task-form__textarea:focus {
+  border-color: #034ea2;
+  box-shadow: 0 0 0 2px rgba(3, 78, 162, 0.1);
+}
+
+.task-form__textarea {
+  min-height: 80px;
+  line-height: 1.4;
+  padding: 12px 16px;
+}
+
+.status-selector {
+  position: relative;
+  width: 100%;
+}
+
+.status-selector__button {
+  width: 100%;
+  height: 30px;
+  padding: 0 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #66676b;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.status-selector__button:focus {
+  border-color: #034ea2;
+  box-shadow: 0 0 0 2px rgba(3, 78, 162, 0.1);
+}
+
+.status-selector__button:hover {
+  background-color: #f7f7f7;
+}
+
+.status-selector__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-selector__label {
+  flex: 1;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.status-selector__chevron {
+  color: #034ea2;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.status-selector__chevron--open {
+  transform: rotate(180deg);
+}
+
+.status-selector__dropdown {
+  padding: 10px;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.status-selector__option {
+  width: 100%;
+  height: 30px;
+  padding: 20px 16px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #66676b;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.status-selector__option:hover {
+  background-color: #f7f7f7;
+}
+
+.status-selector__option:active {
+  background-color: #e8e8e8;
+}
+
+.task-form__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.task-form__button {
+  height: 40px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+}
+
+.task-form__button--cancel {
+  width: 110px;
+  background-color: white;
+  color: #666;
+  border: 1px solid #e5e5e5;
+}
+
+.task-form__button--cancel:hover {
+  background-color: #f5f5f5;
+  border-color: #d0d0d0;
+}
+
+.task-form__button--cancel:active {
+  background-color: #e8e8e8;
+}
+
+.task-form__button--primary {
+  width: 110px;
+  background-color: #034ea2;
+  color: white;
+  border: 1px solid #034ea2;
+}
+
+.task-form__button--primary.task-form__button--update {
+  width: 118px;
+}
+
+.task-form__button--primary:hover {
+  background-color: #023a7f;
+  border-color: #023a7f;
+}
+
+.task-form__button--primary:active {
+  background-color: #012a5c;
+}
+
+.task-form__button--primary:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 480px) {
+  .task-form-page__content {
+    padding: 16px;
+    padding-top: 30px;
+  }
+
+  .task-form {
+    gap: 14px;
+  }
+
+  .task-form__input,
+  .task-form__textarea {
+    padding: 6px 14px;
+    font-size: 11px;
+  }
+
+  .task-form__input {
+    height: 28px;
+  }
+
+  .task-form__textarea {
+    padding: 10px 14px;
+  }
+
+  .status-selector__button,
+  .status-selector__option {
+    height: 28px;
+    padding: 0 14px;
+    font-size: 11px;
+  }
+
+  .task-form__input::placeholder,
+  .task-form__textarea::placeholder {
+    font-size: 11px;
+  }
+
+  .task-form__textarea {
+    min-height: 70px;
+  }
+
+  .status-selector__dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .task-form__actions {
+    margin-top: 16px;
+  }
+
+  .task-form__button {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 768px) {
+  .task-form-page__content {
+    padding: 24px;
+    padding-top: 50px;
+  }
+
+  .task-form {
+    gap: 18px;
+  }
+
+  .task-form__input,
+  .task-form__textarea {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .task-form__input {
+    height: 32px;
+  }
+
+  .task-form__textarea {
+    padding: 14px 18px;
+  }
+
+  .status-selector__button,
+  .status-selector__option {
+    height: 32px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+
+  .task-form__input::placeholder,
+  .task-form__textarea::placeholder {
+    font-size: 13px;
+  }
+
+  .task-form__textarea {
+    min-height: 90px;
+  }
+
+  .status-selector__dot {
+    width: 11px;
+    height: 11px;
+  }
+
+  .task-form__actions {
+    margin-top: 24px;
+  }
+
+  .task-form__button {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .task-form-page__content {
+    padding: 28px;
+    padding-top: 60px;
+  }
+
+  .task-form__input,
+  .task-form__textarea {
+    font-size: 14px;
+  }
+
+  .task-form__input {
+    height: 34px;
+  }
+
+  .status-selector__button,
+  .status-selector__option {
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .task-form__input::placeholder,
+  .task-form__textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .status-selector__dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .task-form__button {
+    font-size: 14px;
+  }
+}

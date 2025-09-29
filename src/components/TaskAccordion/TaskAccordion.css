@@ -1,0 +1,142 @@
+.task-accordion {
+  margin-bottom: 16px;
+}
+
+.task-accordion__header {
+  background-color: #f3f6f9;
+  padding: 12px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.task-accordion__header:hover {
+  background-color: #e8edf3;
+}
+
+.task-accordion__header:active {
+  background-color: #dde4eb;
+}
+
+.task-accordion__title {
+  font-size: 12px;
+  font-weight: 400;
+  color: #231f20;
+  line-height: 1.3;
+}
+
+.task-accordion__count {
+  font-weight: 700;
+  color: #231f20;
+}
+
+.task-accordion__chevron {
+  color: #034ea2;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.task-accordion__chevron--expanded {
+  transform: rotate(180deg);
+}
+
+.task-accordion__content {
+  padding-top: 12px;
+  animation: expandContent 0.2s ease-out;
+}
+
+.task-accordion__empty {
+  padding: 20px;
+  text-align: center;
+  color: #66676b;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@keyframes expandContent {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .task-accordion {
+    margin-bottom: 14px;
+  }
+
+  .task-accordion__header {
+    padding: 10px 14px;
+    border-radius: 4px;
+  }
+
+  .task-accordion__title {
+    font-size: 11px;
+  }
+
+  .task-accordion__content {
+    padding-top: 10px;
+  }
+
+  .task-accordion__empty {
+    padding: 16px;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 768px) {
+  .task-accordion {
+    margin-bottom: 18px;
+  }
+
+  .task-accordion__header {
+    padding: 14px 18px;
+    border-radius: 7px;
+  }
+
+  .task-accordion__title {
+    font-size: 13px;
+  }
+
+  .task-accordion__content {
+    padding-top: 14px;
+  }
+
+  .task-accordion__empty {
+    padding: 24px;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .task-accordion {
+    margin-bottom: 20px;
+  }
+
+  .task-accordion__header {
+    padding: 16px 20px;
+    border-radius: 8px;
+  }
+
+  .task-accordion__title {
+    font-size: 14px;
+  }
+
+  .task-accordion__content {
+    padding-top: 16px;
+  }
+
+  .task-accordion__empty {
+    padding: 28px;
+    font-size: 14px;
+  }
+}
